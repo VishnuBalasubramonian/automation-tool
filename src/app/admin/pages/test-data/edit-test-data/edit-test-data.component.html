@@ -22,7 +22,7 @@
                   </div>
                   <div class="col-md-4 col-lg-4">
                       <!-- <input type="text" name="tcid" class="text form-control" formControlName="tcid"> -->
-                      <p-autoComplete [(ngModel)]="tcid" [suggestions]="filteredTcids"
+                      <p-autoComplete [(ngModel)]="editTestDataObj.tcid" [suggestions]="filteredTcids"
                           (completeMethod)="filterTcids($event)" [size]="30"
                           placeholder="TCID" [minLength]="1" formControlName="tcid"></p-autoComplete>
                   </div>
@@ -54,13 +54,13 @@
                       <label for="param1" class="pull-right">Param 1</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param1" class="text form-control" formControlName="param1">
+                      <input type="text" name="param1" class="text form-control" [(ngModel)]="editTestDataObj.param1" formControlName="param1">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param2" class="pull-right">Param 2</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param2" class="text form-control" formControlName="param2">
+                      <input type="text" name="param2" class="text form-control" [(ngModel)]="editTestDataObj.param2" formControlName="param2">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -68,13 +68,13 @@
                       <label for="Param3" class="pull-right">Param 3</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param3" class="text form-control" formControlName="param3">
+                      <input type="text" name="Param3" class="text form-control" [(ngModel)]="editTestDataObj.param3" formControlName="param3">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param4" class="pull-right">Param 4</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param4" class="text form-control" formControlName="param4">
+                      <input type="text" name="Param4" class="text form-control" [(ngModel)]="editTestDataObj.param4" formControlName="param4">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -82,13 +82,13 @@
                       <label for="Param5" class="pull-right">Param 5</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param5" class="text form-control" formControlName="param5">
+                      <input type="text" name="Param5" class="text form-control" [(ngModel)]="editTestDataObj.param5" formControlName="param5">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param6" class="pull-right">Param 6</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param6" class="text form-control" formControlName="param6">
+                      <input type="text" name="Param6" class="text form-control" [(ngModel)]="editTestDataObj.param6" formControlName="param6">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -96,13 +96,13 @@
                       <label for="Param7" class="pull-right">Param 7</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param7" class="text form-control" formControlName="param7">
+                      <input type="text" name="Param7" class="text form-control" [(ngModel)]="editTestDataObj.param7" formControlName="param7">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param8" class="pull-right">Param 8</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param8" class="text form-control" formControlName="param8">
+                      <input type="text" name="Param8" class="text form-control" [(ngModel)]="editTestDataObj.param8" formControlName="param8">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -110,27 +110,27 @@
                       <label for="Param9" class="pull-right">Param 9</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param9" class="text form-control" formControlName="param9">
+                      <input type="text" name="Param9" class="text form-control" [(ngModel)]="editTestDataObj.param9" formControlName="param9">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param10" class="pull-right">Param 10</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param10" class="text form-control" formControlName="param10">
+                      <input type="text" name="param10" class="text form-control" [(ngModel)]="editTestDataObj.param10" formControlName="param10">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
                   <div class="col-md-2 col-lg-2">
-                      <label for="param11" class="pull-right">Param 11</label>
+                      <label for="Param11" class="pull-right">Param 11</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param11" class="text form-control" formControlName="param11">
+                      <input type="text" name="param11" class="text form-control" [(ngModel)]="editTestDataObj.param11" formControlName="param11">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param12" class="pull-right">Param 12</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param12" class="text form-control" formControlName="param12">
+                      <input type="text" name="param12" class="text form-control" [(ngModel)]="editTestDataObj.param12" formControlName="param12">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -138,13 +138,13 @@
                       <label for="param13" class="pull-right">Param 13</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param13" class="text form-control" formControlName="param13">
+                      <input type="text" name="param13" class="text form-control" [(ngModel)]="editTestDataObj.param13" formControlName="param13">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param14" class="pull-right">Param 14</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param14" class="text form-control" formControlName="param14">
+                      <input type="text" name="param14" class="text form-control" [(ngModel)]="editTestDataObj.param14" formControlName="param14">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -152,13 +152,13 @@
                       <label for="param15" class="pull-right">Param 15</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param5" class="text form-control" formControlName="param5">
+                      <input type="text" name="Param15" class="text form-control" [(ngModel)]="editTestDataObj.param15" formControlName="param15">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param16" class="pull-right">Param 16</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param16" class="text form-control" formControlName="param16">
+                      <input type="text" name="param16" class="text form-control" [(ngModel)]="editTestDataObj.param16" formControlName="param16">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -166,13 +166,13 @@
                       <label for="param17" class="pull-right">Param 17</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param17" class="text form-control" formControlName="param17">
+                      <input type="text" name="param17" class="text form-control" [(ngModel)]="editTestDataObj.param17" formControlName="param17">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param18" class="pull-right">Param 18</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param18" class="text form-control" formControlName="param18">
+                      <input type="text" name="param18" class="text form-control" [(ngModel)]="editTestDataObj.param18" formControlName="param18">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -180,13 +180,13 @@
                       <label for="param19" class="pull-right">Param 19</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param19" class="text form-control" formControlName="param19">
+                      <input type="text" name="param19" class="text form-control" [(ngModel)]="editTestDataObj.param19" formControlName="param19">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param20" class="pull-right">Param 20</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param20" class="text form-control" formControlName="param20">
+                      <input type="text" name="param20" class="text form-control" [(ngModel)]="editTestDataObj.param20" formControlName="param20">
                   </div>
               </div>
 
@@ -195,13 +195,13 @@
                       <label for="param21" class="pull-right">Param 21</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param21" class="text form-control" formControlName="param21">
+                      <input type="text" name="param21" class="text form-control" [(ngModel)]="editTestDataObj.param21" formControlName="param21">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param22" class="pull-right">Param 22</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param22" class="text form-control" formControlName="param22">
+                      <input type="text" name="param22" class="text form-control" [(ngModel)]="editTestDataObj.param22" formControlName="param22">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -209,13 +209,13 @@
                       <label for="param23" class="pull-right">Param 23</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param23" class="text form-control" formControlName="param23">
+                      <input type="text" name="param23" class="text form-control" [(ngModel)]="editTestDataObj.param23" formControlName="param23">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param24" class="pull-right">Param 24</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param24" class="text form-control" formControlName="param24">
+                      <input type="text" name="param24" class="text form-control" [(ngModel)]="editTestDataObj.param24" formControlName="param24">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -223,13 +223,13 @@
                       <label for="param25" class="pull-right">Param 25</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param25" class="text form-control" formControlName="param25">
+                      <input type="text" name="param25" class="text form-control" [(ngModel)]="editTestDataObj.param25" formControlName="param25">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param26" class="pull-right">Param 26</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param26" class="text form-control" formControlName="param26">
+                      <input type="text" name="param26" class="text form-control" [(ngModel)]="editTestDataObj.param26" formControlName="param26">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -237,13 +237,13 @@
                       <label for="param27" class="pull-right">Param 27</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param27" class="text form-control" formControlName="param27">
+                      <input type="text" name="param27" class="text form-control" [(ngModel)]="editTestDataObj.param27" formControlName="param27">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="param28" class="pull-right">Param 28</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param28" class="text form-control" formControlName="param28">
+                      <input type="text" name="param28" class="text form-control" [(ngModel)]="editTestDataObj.param28" formControlName="param28">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -251,13 +251,13 @@
                       <label for="param29" class="pull-right">Param 29</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="param29" class="text form-control" formControlName="param29">
+                      <input type="text" name="param29" class="text form-control" [(ngModel)]="editTestDataObj.param29" formControlName="param29">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 30</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param30" class="text form-control" formControlName="param30">
+                      <input type="text" name="Param30" class="text form-control" [(ngModel)]="editTestDataObj.param30" formControlName="param30">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -265,13 +265,13 @@
                       <label for="param29" class="pull-right">Param 31</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param31" class="text form-control" formControlName="param31">
+                      <input type="text" name="Param31" class="text form-control" [(ngModel)]="editTestDataObj.param31" formControlName="param31">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 32</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param32" class="text form-control" formControlName="param32">
+                      <input type="text" name="Param32" class="text form-control" [(ngModel)]="editTestDataObj.param32" formControlName="param32">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -279,13 +279,13 @@
                       <label for="param29" class="pull-right">Param 33</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param33" class="text form-control" formControlName="param33">
+                      <input type="text" name="Param33" class="text form-control" [(ngModel)]="editTestDataObj.param33" formControlName="param33">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 34</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param34" class="text form-control" formControlName="param34">
+                      <input type="text" name="Param34" class="text form-control" [(ngModel)]="editTestDataObj.param34" formControlName="param34">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -293,13 +293,13 @@
                       <label for="param29" class="pull-right">Param 35</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param35" class="text form-control" formControlName="param35">
+                      <input type="text" name="Param35" class="text form-control" [(ngModel)]="editTestDataObj.param35" formControlName="param35">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 36</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param36" class="text form-control" formControlName="param36">
+                      <input type="text" name="Param36" class="text form-control" [(ngModel)]="editTestDataObj.param36" formControlName="param36">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -307,13 +307,13 @@
                       <label for="param29" class="pull-right">Param 37</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param37" class="text form-control" formControlName="param37">
+                      <input type="text" name="Param37" class="text form-control" [(ngModel)]="editTestDataObj.param37" formControlName="param37">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 38</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param38" class="text form-control" formControlName="param38">
+                      <input type="text" name="Param38" class="text form-control" [(ngModel)]="editTestDataObj.param38" formControlName="param38">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -321,13 +321,13 @@
                       <label for="param29" class="pull-right">Param 39</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param39" class="text form-control" formControlName="param39">
+                      <input type="text" name="Param39" class="text form-control" [(ngModel)]="editTestDataObj.param39" formControlName="param39">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param30" class="pull-right">Param 40</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param40" class="text form-control" formControlName="param40">
+                      <input type="text" name="Param40" class="text form-control" [(ngModel)]="editTestDataObj.param40" formControlName="param40">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -335,13 +335,13 @@
                       <label for="Param41" class="pull-right">Param 41</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param41" class="text form-control" formControlName="param41">
+                      <input type="text" name="Param41" class="text form-control" [(ngModel)]="editTestDataObj.param41" formControlName="param41">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param42" class="pull-right">Param 42</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param42" class="text form-control" formControlName="param42">
+                      <input type="text" name="Param42" class="text form-control" [(ngModel)]="editTestDataObj.param42" formControlName="param42">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -349,13 +349,13 @@
                       <label for="Param43" class="pull-right">Param 43</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param43" class="text form-control" formControlName="param43">
+                      <input type="text" name="Param43" class="text form-control" [(ngModel)]="editTestDataObj.param43" formControlName="param43">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param44" class="pull-right">Param 44</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param44" class="text form-control" formControlName="param44">
+                      <input type="text" name="Param44" class="text form-control" [(ngModel)]="editTestDataObj.param44" formControlName="param44">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -363,13 +363,13 @@
                       <label for="Param45" class="pull-right">Param 45</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param45" class="text form-control" formControlName="param45">
+                      <input type="text" name="Param45" class="text form-control" [(ngModel)]="editTestDataObj.param45" formControlName="param45">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param46" class="pull-right">Param 46</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param46" class="text form-control" formControlName="param46">
+                      <input type="text" name="Param46" class="text form-control" [(ngModel)]="editTestDataObj.param46" formControlName="param46">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -377,13 +377,13 @@
                       <label for="Param47" class="pull-right">Param 47</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param47" class="text form-control" formControlName="param47">
+                      <input type="text" name="Param47" class="text form-control" [(ngModel)]="editTestDataObj.param47" formControlName="param47">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param48" class="pull-right">Param 48</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param48" class="text form-control" formControlName="param48">
+                      <input type="text" name="Param48" class="text form-control" [(ngModel)]="editTestDataObj.param48" formControlName="param48">
                   </div>
               </div>
               <div class="row padding-bottom-1 align-items-center">
@@ -391,13 +391,13 @@
                       <label for="Param49" class="pull-right">Param 49</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param49" class="text form-control" formControlName="param49">
+                      <input type="text" name="Param49" class="text form-control" [(ngModel)]="editTestDataObj.param49" formControlName="param49">
                   </div>
                   <div class="col-md-2 col-lg-2">
                       <label for="Param50" class="pull-right">Param 50</label>
                   </div>
                   <div class="col-md-4 col-lg-4">
-                      <input type="text" name="Param50" class="text form-control" formControlName="param50">
+                      <input type="text" name="Param50" class="text form-control" [(ngModel)]="editTestDataObj.param50" formControlName="param50">
                   </div>
               </div>
 

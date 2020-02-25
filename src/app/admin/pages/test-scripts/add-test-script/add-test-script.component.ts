@@ -140,9 +140,9 @@ export class AddTestScriptComponent implements OnInit {
 
   ngOnInit() {
     this.runValues = [
-      { label: 'YC' },
-      { label: 'YS' },
-      { label: 'NO' },
+      { label: 'YC', value:'YC' },
+      { label: 'YS',value:'YS' },
+      { label: 'NO',value:'NO' },
     ];
     this.populateFunctionNames();
   }

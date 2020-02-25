@@ -26,7 +26,7 @@ export class KeywordService {
    
    getKeywords(): Observable<Keywords[]>{
      if(this.user.roleId == this.roleConstants[0].RoleID){
-     return this.httpClient.get(this.apiUrl+'/Keywords/GetAllKeywordsAdmin/'+this.user.userId)
+     return this.httpClient.get(this.apiUrl+'/Keywords/GetAllKeywordsAdmin')
                 .pipe(
                   map(res=>res as Keywords[]),
                   catchError(this.errorHandle)
@@ -43,7 +43,7 @@ export class KeywordService {
 
    getKeyword(id:number):Observable<Keywords>{
     if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/Keywords/GetKeywordByIdAdmin/'+id+'/'+this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/Keywords/GetKeywordByIdAdmin/'+id)
       .pipe(
         map(res=>res as Keywords),
         catchError(this.errorHandle)

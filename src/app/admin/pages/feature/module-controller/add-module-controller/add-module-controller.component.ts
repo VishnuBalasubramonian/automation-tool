@@ -13,10 +13,10 @@ export class AddModuleControllerComponent implements OnInit {
   runValues: any;
   selectedRun : any;
   moduleControllerForm = new FormGroup({
-    moduleID:  new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    moduleSeqID:  new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    machineID: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    machineSequenceID: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    moduleID:  new FormControl('', [Validators.required]),
+    moduleSeqID:  new FormControl('', [Validators.required]),
+    machineID: new FormControl('', [Validators.required]),
+    machineSequenceID: new FormControl('', [Validators.required]),
     run: new FormControl(''),
 });
   constructor(private featureService:FeatureService,private router: Router) { }

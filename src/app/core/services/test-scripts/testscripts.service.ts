@@ -35,7 +35,7 @@ export class TestScriptsService {
   }
    getTestScripts():Observable<TestScript[]>{
      if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/TestScripts/GetScriptsAdmin'+'/' + this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/TestScripts/GetScriptsAdmin')
                 .pipe(
                   map(res=>res as TestScript[]),
                   catchError(this.errorHandle)
@@ -52,7 +52,7 @@ export class TestScriptsService {
 
    getTestScript(id:number):Observable<TestScript>{
     if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/TestScripts/GetScriptAdmin/'+id+'/'+this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/TestScripts/GetScriptAdmin/'+id)
       .pipe(
         map(res=>res as TestScript),
         catchError(this.errorHandle)

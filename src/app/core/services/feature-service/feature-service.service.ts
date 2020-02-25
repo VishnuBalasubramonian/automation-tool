@@ -25,7 +25,7 @@ export class FeatureService {
   
   getAllModuleController():Observable<ModuleController[]>{
     if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/Feature/GetAllModuleControllerAdmin/'+this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/Feature/GetAllModuleControllerAdmin/')
                .pipe(
                  map(res=>res as ModuleController[]),
                  catchError(this.errorHandle)
@@ -42,7 +42,7 @@ export class FeatureService {
 
   getAllTestController():Observable<TestController[]>{
     if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/Feature/GetAllTestControllerAdmin/'+this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/Feature/GetAllTestControllerAdmin/')
               .pipe(
                 map(res=>res as TestController[]),
                 catchError(this.errorHandle)
@@ -60,14 +60,14 @@ export class FeatureService {
 
    return this.httpClient.get(this.apiUrl+'/Feature/GetAllBrowserController/')
               .pipe(
-                map(res=> res as BrowserController[]),
+                map(res=> res as BrowserController[],
                 catchError(this.errorHandle)
-              );
+              ));
  }
 
  getModuleController(id:number):Observable<ModuleController>{
   if(this.user.roleId == this.roleConstants[0].RoleID){
-    return this.httpClient.get(this.apiUrl+'/Feature/GetModuleControllerByIdAdmin/'+id+'/'+this.user.userId)
+    return this.httpClient.get(this.apiUrl+'/Feature/GetModuleControllerByIdAdmin/'+id)
    .pipe(
      map(res=>res as ModuleController),
      catchError(this.errorHandle)
@@ -84,7 +84,7 @@ export class FeatureService {
 
   getTestController(id:number):Observable<TestController>{
     if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/Feature/GetTestControllerByIdAdmin/'+id+'/'+this.user.userId)
+      return this.httpClient.get(this.apiUrl+'/Feature/GetTestControllerByIdAdmin/'+id)
    .pipe(
      map(res=>res as TestController),
      catchError(this.errorHandle)
@@ -100,20 +100,12 @@ export class FeatureService {
   }
 
   getBrowserController(id:number):Observable<BrowserController>{
-    if(this.user.roleId == this.roleConstants[0].RoleID){
-      return this.httpClient.get(this.apiUrl+'/Feature/GetBrowserControllerByIdAdmin/'+id)
-      .pipe(
-        map(res=>res as BrowserController),
-        catchError(this.errorHandle)
-      );
-    }
-    else{
+    
    return this.httpClient.get(this.apiUrl+'/Feature/GetBrowserControllerById/'+id)
    .pipe(
      map(res=>res as BrowserController),
      catchError(this.errorHandle)
    );
-    }
   }
    
   addModuleController(moduleController: ModuleController){

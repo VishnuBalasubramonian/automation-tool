@@ -17,12 +17,12 @@ export class AddRepositoryComponent implements OnInit {
   findMethodOptions:any;
   findMethodValue:any;
   repositoryForm = new FormGroup({
-    logicalName:  new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    findMethod:  new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    xpathQueryPropertyName: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    propertyValue: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    tagName: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    module: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    logicalName:  new FormControl('', [Validators.required]),
+    findMethod:  new FormControl('', [Validators.required]),
+    xpathQueryPropertyName: new FormControl('', [Validators.required]),
+    propertyValue: new FormControl('', [Validators.required]),
+    tagName: new FormControl('', [Validators.required]),
+    module: new FormControl('', [Validators.required]),
 });
   constructor(private route:ActivatedRoute, private service:RepositoryService,private router: Router) { }
 

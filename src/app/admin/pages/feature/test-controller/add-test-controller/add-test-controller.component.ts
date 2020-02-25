@@ -18,16 +18,16 @@ export class AddTestControllerComponent implements OnInit {
 
   testControllerForm = new FormGroup({
     featureID:  new FormControl('',[Validators.required]),
-    testCaseID:  new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    testCaseID:  new FormControl('', [Validators.required]),
     run: new FormControl('',[Validators.required]),
     iterations: new FormControl('', [Validators.required]),
-    browsers: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    browsers: new FormControl('', [Validators.required]),
     sequenceID: new FormControl('', [Validators.required]),
-    testType: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    jiraID: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    testType: new FormControl('', [Validators.required]),
+    jiraID: new FormControl('', [Validators.required]),
     stepsCount: new FormControl('', [Validators.required]),
-    testScriptName: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    testScriptDescription: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    testScriptName: new FormControl('', [Validators.required]),
+    testScriptDescription: new FormControl('', [Validators.required]),
 });
   constructor(private featureService:FeatureService,private router: Router) { }
 

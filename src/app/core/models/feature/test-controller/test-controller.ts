@@ -3,7 +3,7 @@ export class TestController {
   featureID: string;
   testCaseID: string;
   run: string;
-  iterations: number;
+  iterations: string;
   browsers: string;
   sequenceID: number;
   testType: string;

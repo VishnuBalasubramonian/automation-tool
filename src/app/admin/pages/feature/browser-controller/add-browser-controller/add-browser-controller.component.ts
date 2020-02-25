@@ -15,8 +15,8 @@ export class AddBrowserControllerComponent implements OnInit {
   selectedExec: string;
   browserController: BrowserController;
   browserControllerForm = new FormGroup({
-    vmid: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
-    browser: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]),
+    vmid: new FormControl('', [Validators.required]),
+    browser: new FormControl('', [Validators.required]),
     exec: new FormControl(''),
   });
   constructor(private featureService: FeatureService, private router: Router) { }
