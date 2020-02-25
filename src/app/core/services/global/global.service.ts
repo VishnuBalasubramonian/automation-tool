@@ -14,6 +14,7 @@ export class GlobalService {
   public apiUrl:string;
   opened: boolean = false;
   currentTabName: string;
+  featureTabSelectedIndex: number;
 
   public activeUsers;
   public recordsModified;
@@ -24,6 +25,7 @@ export class GlobalService {
   repositoryRecordsCount: number;
   testScriptsRecordsCount: number;
   testDataRecordsCount: number;
+
   
   constructor(private httpClient: HttpClient) { 
     this.apiUrl = environment.APIURL;
@@ -36,6 +38,7 @@ export class GlobalService {
     this.repositoryRecordsCount = 0;
     this.testScriptsRecordsCount = 0;
     this.testDataRecordsCount = 0;
+    //this.featureTabSelectedIndex = this.featureTabSelectedIndex==null?0:this.featureTabSelectedIndex;
   }
 
 
@@ -201,6 +204,18 @@ export class GlobalService {
 
   GetCurrentTab(): string {
     return this.currentTabName;
+  }
+
+  SetFeatureTabSelectedIndex(index:number){
+    console.log(this.featureTabSelectedIndex);
+    this.featureTabSelectedIndex = index;
+    localStorage.setItem('currentSelectedFeatureTab', JSON.stringify(index))
+    console.log(this.featureTabSelectedIndex);
+  }
+  GetFeatureTabSelectedIndex():number{
+    console.log(this.featureTabSelectedIndex);
+    this.featureTabSelectedIndex = +localStorage.getItem('currentSelectedFeatureTab');
+    return this.featureTabSelectedIndex;
   }
 
   errorHandle(error:Response){

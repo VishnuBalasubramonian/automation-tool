@@ -20,9 +20,9 @@ export class AddRepositoryComponent implements OnInit {
     logicalName:  new FormControl('', [Validators.required]),
     findMethod:  new FormControl('', [Validators.required]),
     xpathQueryPropertyName: new FormControl('', [Validators.required]),
-    propertyValue: new FormControl('', [Validators.required]),
-    tagName: new FormControl('', [Validators.required]),
-    module: new FormControl('', [Validators.required]),
+    propertyValue: new FormControl(''),
+    tagName: new FormControl(''),
+    module: new FormControl(''),
 });
   constructor(private route:ActivatedRoute, private service:RepositoryService,private router: Router) { }
 

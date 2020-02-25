@@ -1,8 +1,8 @@
 <div class="col-md-12 col-lg-12">
     <div class="row" style="padding-top: 2em;">
         <div class="col-md-12 col-lg-12">
-            <p-tabView>
-                <p-tabPanel header="BrowserController">
+            <p-tabView (onChange)="onTabChange($event)">
+                <p-tabPanel header="BrowserController" [selected]="isbrowserTabSelected">
                     <div class="row controller-header align-items-center">
                         <div class="col-md-4 col-lg-4">
                             <button class="btn btn-primary pull-left feature-add-btn" style="margin-right:27px;font-size: 0.65em"
@@ -89,7 +89,7 @@
                     </div>
 
                 </p-tabPanel>
-                <p-tabPanel header="ModuleController">
+                <p-tabPanel header="ModuleController" [selected]="ismoduleTabSelected">
                     <div class="row controller-header align-items-center">
                         <div class="col-md-4 col-lg-4">
                             <button class="btn btn-primary pull-left feature-add-btn" style="margin-right:27px;font-size: 0.65em"
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                 </p-tabPanel>
-                <p-tabPanel header="TestController">
+                <p-tabPanel header="TestController" [selected]="istestControllerTabSelected">
                     <div class="row controller-header align-items-center">
                         <div class="col-md-4 col-lg-4">
                             <button class="btn btn-primary pull-left feature-add-btn" style="margin-right:27px; font-size: 0.65em;"

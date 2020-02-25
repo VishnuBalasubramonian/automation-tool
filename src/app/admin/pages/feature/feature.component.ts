@@ -32,6 +32,9 @@ export class FeatureComponent implements OnInit {
   selectedModuleControllerCols: any[];
   loading: boolean = true;
   frozenCols: any[];
+  isbrowserTabSelected: boolean;
+  ismoduleTabSelected: boolean;
+  istestControllerTabSelected: boolean;
   
   @ViewChild(Table, { static : false}) tt: Table;
   @ViewChild(Table, { static : false}) bt: Table;
@@ -93,7 +96,8 @@ export class FeatureComponent implements OnInit {
     this.LoadAllModuleControllerColumns();
     this.LoadAllTestControllerColumns();
     this.globalService.SetCurrentTab('FEATURE');
-   
+    //this.globalService.SetFeatureTabSelectedIndex(1);
+    this.setCurrentTab();
   }
 
   LoadAllTestControllerColumns() {
@@ -230,5 +234,31 @@ export class FeatureComponent implements OnInit {
 
   public chartHovered(e: any): void {
     
+  }
+
+  public onTabChange(event){
+    //console.log(event.index);
+    this.globalService.SetFeatureTabSelectedIndex(event.index);
+    this.setCurrentTab();
+  }
+
+  public setCurrentTab(){
+    var event =  this.globalService.GetFeatureTabSelectedIndex();
+    //console.log(event);
+    if(event == 0){
+      this.isbrowserTabSelected = true;
+      this.ismoduleTabSelected = false;
+      this.istestControllerTabSelected = false;
+    }
+    else if(event == 1){
+      this.ismoduleTabSelected = true;
+      this.istestControllerTabSelected = false;
+      this.isbrowserTabSelected = false;
+    }
+    else{
+      this.istestControllerTabSelected = true;
+      this.isbrowserTabSelected = false;
+      this.ismoduleTabSelected = false;
+    }
   }
 }
