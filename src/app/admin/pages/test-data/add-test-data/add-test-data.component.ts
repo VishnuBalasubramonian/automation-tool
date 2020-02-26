@@ -306,8 +306,8 @@ export class AddTestDataComponent implements OnInit {
     data.module = this.testdataForm.controls["module"].value;
     data.tcid = this.testdataForm.controls["tcid"].value;
     data.iterations = this.testdataForm.controls["iterations"].value;
-    data.envDetail_1 = this.testdataForm.controls["envDetail_1"].value;
-    data.envDetail_2 = this.testdataForm.controls["envDetail_2"].value;
+    data.envDetail1 = this.testdataForm.controls["envDetail_1"].value;
+    data.envDetail2 = this.testdataForm.controls["envDetail_2"].value;
     data.param1 = this.testdataForm.controls["param1"].value;
     data.param2 = this.testdataForm.controls["param2"].value;
     data.param3 = this.testdataForm.controls["param3"].value;

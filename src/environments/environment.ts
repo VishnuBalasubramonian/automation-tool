@@ -7,6 +7,6 @@ export const environment = {
   production: false,
   //APIURL: "http://ec2-13-127-136-138.ap-south-1.compute.amazonaws.com//api",
 
-  APIURL: "http://localhost:57066/api"
+  APIURL: "https://localhost:44376/api"
 
 };

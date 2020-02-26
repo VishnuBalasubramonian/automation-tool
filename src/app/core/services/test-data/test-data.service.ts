@@ -15,29 +15,16 @@ export class TestDataService {
   user: User;
 
   deleteTestData(id: any, tcid: any, iterations: any) {
-    // this.getAllTestData()
-    // .subscribe((result: TestData[])=>{
-    //     if(result.length > 0){
-    //       var newId: any = result.filter(tdItem =>
-    //         (tdItem.tcid == tcid) && (tdItem.iterations != iterations))[0].id;
-    //         if(newId){
-    //           return this.httpClient.delete(this.apiUrl+'/Keywords/DeleteKeyword/'+id+'/'+2)
-    //             .subscribe(
-    //               data  => {
-    //               this.toastr.warning("Test Data  (iteration 1) has been Deleted !");
-    //               return this.httpClient.delete(this.apiUrl+'/Keywords/DeleteKeyword/'+newId+'/'+2)
-    //                 .subscribe( data => {
-    //                   this.toastr.warning("Test Data  (iteration 2) has been Deleted !");
-    //                 });
-    //               },
-    //               error  => {
-    //               console.log("Error", error);
-    //             }
-    //           );
-    //         }
-    //     }
-    // });
-
+    return this.httpClient.delete(this.apiUrl+'/TestData/DeleteTestData/'+id+'/'+this.user.userId)
+    .subscribe(
+      data  => {
+        console.log("DELETE Request is successful ", data);
+        this.toastr.warning("testdata Delete has been successfull")
+        },
+        error  => {
+        console.log("Error", error);
+        }
+    );
 
   }
 
